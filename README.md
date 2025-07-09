@@ -31,8 +31,6 @@ YouTube, TikTok, Twitter, Facebook, Instagram & more!
 
 ## Run from Source
 
-```sh
-
 pip install -r requirements.txt
 python main.py
 
@@ -106,4 +104,3 @@ pyinstaller --onefile --windowed --icon=easyytd_logo.ico --name=easyytd main.py
 
 FFmpeg’den çıkan ffmpeg.exe, ffplay.exe, ffprobe.exe dosyalarını da aynı klasöre ekle.
 
-```sh
