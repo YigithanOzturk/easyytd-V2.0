@@ -105,3 +105,5 @@ pyinstaller --onefile --windowed --icon=easyytd_logo.ico --name=easyytd main.py
 Çıktı dist/ klasöründe main.exe veya belirlediğin isimde oluşacaktır.
 
 FFmpeg’den çıkan ffmpeg.exe, ffplay.exe, ffprobe.exe dosyalarını da aynı klasöre ekle.
+
+```sh
