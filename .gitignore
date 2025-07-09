@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.spec
+*.zip
+
+# VSCode / PyCharm / JetBrains
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# App config / logs / local secrets
+*.log
+
+# EasyYTD specific
+guncelleme.txt
+history.json
+settings.json
+
+# Executables
+*.exe
+*.dll
+*.so
