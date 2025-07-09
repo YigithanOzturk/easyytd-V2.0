@@ -99,9 +99,9 @@ class DownloadThread(QThread):
             downloaded_file = None
             info = None
 
-            # --- Zorunlu H264/MP4/M4A formatı --- #
+            
             def video_format_str():
-                # mp4 uzantılı, H.264 (avc1) video, yükseklik eşleşirse
+                
                 if height:
                     return f'bestvideo[ext=mp4][vcodec^=avc1][height={height}]+bestaudio[ext=m4a]/best[ext=mp4]'
                 else:
@@ -141,7 +141,7 @@ class DownloadThread(QThread):
                             downloaded_file = file_
                             break
 
-                # FastStart
+                
                 if downloaded_file and downloaded_file.endswith(".mp4"):
                     fixed_file = downloaded_file.replace(".mp4", "_fixed.mp4")
                     try:
@@ -197,7 +197,7 @@ class DownloadThread(QThread):
                         downloaded_file = file_
 
             elif self.download_type == "Ayrı Ayrı (Ses + Video)":
-                # Video indir
+            
                 ydl_opts_vid = ydl_opts.copy()
                 ydl_opts_vid['format'] = video_only_format_str()
                 ydl_opts_vid['outtmpl'] = os.path.join(self.download_path, '%(title)s_video.%(ext)s')
@@ -223,7 +223,7 @@ class DownloadThread(QThread):
                         os.replace(fixed_file, video_file)
                     except Exception as e:
                         print("FFmpeg ile remux hatası:", e)
-                # Ses indir
+
                 ydl_opts_audio = ydl_opts.copy()
                 ydl_opts_audio['format'] = audio_only_format_str()
                 ydl_opts_audio['outtmpl'] = os.path.join(self.download_path, '%(title)s_audio.%(ext)s')
@@ -242,7 +242,7 @@ class DownloadThread(QThread):
             self.set_files_to_now(self.download_path, ext)
             output_file = downloaded_file
 
-            # Klip özelliği
+           
             if self.clip_enabled and output_file and os.path.exists(output_file):
                 try:
                     base, ext_ = os.path.splitext(output_file)
@@ -271,8 +271,8 @@ class DownloadThread(QThread):
                 self.progress.emit(int(float(percent)))
             except:
                 self.progress.emit(0)
-            speed = d.get('speed', 0)  # bytes/s
-            eta = d.get('eta', 0)      # seconds
+            speed = d.get('speed', 0)  
+            eta = d.get('eta', 0)      
             self.speed_eta.emit(speed or 0, eta or 0)
         elif d.get('status') == 'finished':
             self.progress.emit(100)

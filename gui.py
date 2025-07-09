@@ -94,7 +94,7 @@ class DownloaderApp(QWidget):
     def init_ui(self):
         main_layout = QVBoxLayout(self)
 
-        # Menü çubuğu
+       
         self.menubar = QMenuBar(self)
         settings_menu = self.menubar.addMenu("Ayarlar")
         clear_history_action = QAction("Geçmişi Temizle", self)
@@ -210,7 +210,7 @@ class DownloaderApp(QWidget):
         path_layout.addWidget(self.browse_btn)
         main_layout.addLayout(path_layout)
 
-        # --- Klip Aralığı Seçimi ---
+        
         clip_row = QHBoxLayout()
         self.clip_checkbox = QCheckBox("Belirli aralığı indir")
         self.clip_start_input = QLineEdit()
@@ -421,7 +421,7 @@ class DownloaderApp(QWidget):
         )
         self.dl_thread.progress.connect(self.progress_bar.setValue)
         self.dl_thread.done.connect(self.download_done)
-        self.dl_thread.speed_eta.connect(self.update_speed_eta)  # <-- HIZ/KALAN SÜRE GÜNCELLEME
+        self.dl_thread.speed_eta.connect(self.update_speed_eta) 
         self.dl_thread.start()
 
     def update_speed_eta(self, speed, eta):
@@ -494,7 +494,7 @@ class DownloaderApp(QWidget):
         QMessageBox.critical(self, "Hata", msg)
 
 
-    # ----- YENİ EKSTRA FONKSİYONLAR -----
+
 
     def clear_history_clicked(self):
         clear_history()
@@ -506,7 +506,7 @@ class DownloaderApp(QWidget):
         QMessageBox.information(self, "Hakkında", "easyytd v1.0\nYouTube Video, Müzik ve Shorts İndirici\nYigithan Ozturk\nhttps://github.com/YigithanOzturk")
 
     def check_for_update(self):
-        # Basit github sürüm kontrolü
+        
         try:
             version_url = "https://raw.githubusercontent.com/YigithanOzturk/easyytd/main/VERSION"
             response = requests.get(version_url, timeout=3)
@@ -524,7 +524,6 @@ class DownloaderApp(QWidget):
         if "youtube.com" in text or "youtu.be" in text:
             self.url_input.setText(text)
 
-    # Sürükle-bırak ile link ekleme
     def dragEnterEvent(self, event):
         if event.mimeData().hasText():
             event.acceptProposedAction()
