@@ -7,7 +7,7 @@ YouTube, TikTok, Twitter, Facebook, Instagram & more!
 
 ## 🚀 Quick Start
 
-- **[⬇️ Download easyytd.exe](https://github.com/YigithanOzturk/easyytd/releases/latest)**
+- **[⬇️ Download easyytd.exe](https://github.com/YigithanOzturk/easyytd-V2.0/releases)**
 - No installation needed. Just run the `.exe` on Windows.
 - [Download FFmpeg](https://ffmpeg.org/download.html) and copy all three exe files from the zip into the same folder as easyytd.exe:
 
@@ -61,7 +61,7 @@ YouTube, TikTok, Twitter, Facebook, Instagram ve daha fazlası!
 
 ### 🚀 Hızlı Başlangıç
 
-- **[⬇️ easyytd.exe İndir](https://github.com/YigithanOzturk/easyytd/releases/latest)**
+- **[⬇️ easyytd.exe İndir](https://github.com/YigithanOzturk/easyytd-V2.0/releases)**
 - Kurulum gerekmez. Windows için `.exe` dosyasını çalıştırın.
 - [FFmpeg indir](https://ffmpeg.org/download.html) ve `easyytd.exe` ile aynı klasöre **şu üç dosyayı ekleyin**:
     - `ffmpeg.exe`
